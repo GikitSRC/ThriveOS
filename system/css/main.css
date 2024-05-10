@@ -1,0 +1,292 @@
+body {
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    margin: 0; 
+    background-image: url("/media/wallpapers/chinese.png");
+    background-size: cover;
+    padding: none;
+}
+
+#startBtnDiv {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: black;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boot {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.initiate {
+    margin-left: 100px;
+}
+
+.timeInit {
+    color: green;
+}
+
+.success {
+    color: red;
+}
+
+#startBtn {
+    background-color: rgba(45, 45, 45, 0.5);
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 25px;
+    width: 100%;
+    color: white;
+    font-family: monospace;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#startBtn:hover {
+    transform: translate(4px, 10px);
+    border-radius: 15px;
+    box-shadow: -10px -10px 5px 0px rgba(100,100,100,0.4);
+}
+
+#startBtn:active {
+    transform: scale(0.9);
+}
+
+.noflex {
+    display: block;
+    text-align: center;
+}
+
+#welcome {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 90%;
+    margin-top: 1.5%;
+    width: 90%;
+    margin-left: 5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(100px);
+    font-family: monospace;
+    text-align: center;
+    padding-top: 35px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#gallery {
+    width: 70%;
+    height: 60%;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-left: 15%;
+    padding: 5px;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 25px;
+    border: 2px solid blanchedalmond;
+}
+
+#gallery img:hover {
+    transform: scale(0.9);
+    border: 2px solid rgb(48, 39, 25);
+    border-radius: 25px;
+}
+
+#setupNext {
+    width: 80%;
+    height: 10%;
+    margin-top: 1%;
+    background-color: rgba(100, 100, 100, 0.9);
+    backdrop-filter: blur;
+    color: white;
+    font-family: monospace;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#setupNext:hover {
+    transform: translate(4px, 10px);
+    border-radius: 15px;
+    box-shadow: -10px -10px 5px 0px rgba(100,100,100,0.4);
+}
+
+#websiteFaviconInput {
+    background-color: rgba(100, 100, 100, 0.9);
+    backdrop-filter: blur;
+    color: white;
+    font-family: monospace;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: text;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+}
+
+#websiteTitleInput {
+    background-color: rgba(100, 100, 100, 0.9);
+    backdrop-filter: blur;
+    color: white;
+    font-family: monospace;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: text;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+}
+
+#websiteFaviconInput:hover {
+    border-radius: 15px;
+    background-color: beige;
+    color: black;
+}
+
+#websiteTitleInput:hover {
+    border-radius: 15px;
+    background-color: beige;
+    color: black;
+}
+
+#submitCloak {
+    width: 10%;
+    padding: 10px;
+    margin-top: 1%;
+    background-color: rgba(100, 100, 100, 0.9);
+    backdrop-filter: blur;
+    color: white;
+    font-family: monospace;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#submitCloak:hover {
+    transform: translate(4px, 4px);
+    border-radius: 15px;
+    box-shadow: -10px -10px 5px 0px rgba(100,100,100,0.4);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.tosP {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#uiSelect {
+    background-color: rgba(35, 35, 35, 0.9);
+    border-radius: 25px;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#leftUi {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+
+#rightUi {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+
+#leftUi img {
+    height: 80%;
+    margin-top: 5%;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#rightUi img {
+    height: 80%;
+    margin-top: 5%;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#leftUi img:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+#rightUi img:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+#leftUi img:active {
+    transform: scale(0.8);
+}
+
+#rightUi img:active {
+    transform: scale(0.8);
+}
+
+#setupContent {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 90%;
+    margin-top: 1.5%;
+    width: 90%;
+    margin-left: 5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(100px);
+    font-family: monospace;
+    text-align: center;
+    padding-top: 35px;
+    border-radius: 25px;
+    overflow: hidden;
+}
