@@ -3,8 +3,8 @@ const startBtn = document.getElementById("startBtn");
 const setupContent = document.getElementById("setupContent");
 const personalizationUi = document.getElementById("uiSelect");
 const welcome = document.getElementById("welcome");
-const windowedModeBtn = document.getElementById("windowedMode");
 const windowlessModeBtn = document.getElementById("windowlessMode");
+const windowedModeBtn = document.getElementById("windowedMode");
 const body = document.body;
 const wallpapers = [
     "/media/wallpapers/cat.jpg",
@@ -94,93 +94,135 @@ function wrapper(message){
 }
 
 function initiateThrive() {
-    
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Initializing components');
-       // initiate.innerHTML += `<br><span class="timeInit">[${getCurrentTime}]</span> Initializing components...`;
+        initiate.innerHTML += wrapper(' Checking system hardware...');
     }, 100);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Complete!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 200);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Loading configuration files');
+        initiate.innerHTML += wrapper(' Mounting file systems...');
     }, 201);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Configuration Loaded!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 256);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Starting Services');
+        initiate.innerHTML += wrapper(' Starting core services...');
     }, 257);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Services Started!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 356);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Initializing Secure Boot');
+        initiate.innerHTML += wrapper(' Initializing network interfaces...');
     }, 357);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Secure Boot Initialized!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 540);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Loading External Libraries');
+        initiate.innerHTML += wrapper(' Loading kernel modules...');
     }, 545);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Libraries Loaded!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 900);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Configuring Environment Variables');
+        initiate.innerHTML += wrapper(' Configuring system settings...');
     }, 901);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Environment Configured!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 1008);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Initializing Components');
+        initiate.innerHTML += wrapper(' Initializing user session...');
     }, 1009);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Plugins Initialized!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 1090);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Setting Up Event Listeners');
+        initiate.innerHTML += wrapper(' Launching desktop environment...');
     }, 1091);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Listeners Ready!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 1300);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Preparing Data Structures');
+        initiate.innerHTML += wrapper(' Restoring user data...');
     }, 1301);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Data Structures Prepared!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 1457);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += wrapper(' Fetching Localstorage Data...');
+        initiate.innerHTML += wrapper(' Finalizing boot process...');
     }, 1458);
-    
+
     setTimeout(() => {
-        initiate.innerHTML += `<span class=\"success\"> - Localstorage Fetched!</span>`;
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
     }, 1499);
-    
+
+    // Additional 5 boot messages
+    setTimeout(() => {
+        initiate.innerHTML += wrapper(' Checking system integrity...');
+    }, 1550);
+
+    setTimeout(() => {
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
+    }, 1600);
+
+    setTimeout(() => {
+        initiate.innerHTML += wrapper(' Performing memory diagnostics...');
+    }, 1650);
+
+    setTimeout(() => {
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
+    }, 1700);
+
+    setTimeout(() => {
+        initiate.innerHTML += wrapper(' Initializing power management...');
+    }, 1750);
+
+    setTimeout(() => {
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
+    }, 1800);
+
+    setTimeout(() => {
+        initiate.innerHTML += wrapper(' Configuring system logging...');
+    }, 1850);
+
+    setTimeout(() => {
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
+    }, 1900);
+
+    setTimeout(() => {
+        initiate.innerHTML += wrapper(' Preparing system for user login...');
+    }, 1950);
+
+    setTimeout(() => {
+        initiate.innerHTML += `<span class=\"success\"> - SUCCESS</span>`;
+    }, 2000);
+
     setTimeout(() => {
         fadeOutDelete(boot);
         setupThrive(1);
-    }, 1600);
+    }, 2100);
 }
+
+
+
 
 // Wallpaper configuration functions. Do not touch.
 
@@ -219,11 +261,13 @@ function cloakPage(faviconUrl, title) {
 // Setup Thrive functions below.
 
 function setupThrive(pageNumber) {
+    
     var currentPageNumber = pageNumber;
     if (pageNumber === 1) {
         setupContent.innerHTML = `
         <h1>Welcome to ThriveOS.</h1>
         <p>Let's setup your new favorite operating system!</p>
+        <i>Use ctrl +/- to optimize the screen size! OS designed for intended fullscreen usage.</i>
         <hr>
     <h1>Select your wallpaper:</h1>
         <div id="gallery">
@@ -243,48 +287,65 @@ function setupThrive(pageNumber) {
             <img src="/media/wallpapers/tokyo.jpg" alt="Tokyo" onclick="changeWallpaper('tokyo.jpg')">
             <img src="/media/wallpapers/wave_black.png" alt="Wave Black" onclick="changeWallpaper('wave_black.png')">
         </div>
+        <div class="bottomSetup">
         <button id="setupNext" onclick="setupThrive(2)"><h1>Next</h1></button>
+        </div>
     `;
     } else if (pageNumber === 2) {
         setupContent.innerHTML = `
         <h1>Welcome to ThriveOS.</h1>
         <p>Let's setup your new favorite operating system!</p>
         <hr>
-        <h1>Personalization</h1>
-        <p>We have two main System UIs. Windowsless mode, or Windows mode.</p>
-        <div id="uiSelect">
+        <h1 class="animate__animated animate__fadeIn">Personalization</h1>
+        <p class="animate__animated animate__fadeIn">We have two main System UIs. Windowsless mode, or Windows mode. <i>Defaults to Windowless, inspired by <a href="https://hyprland.org">hyprland</a></i></p>
+        <div class="animate__animated animate__fadeIn" id="uiSelect">
           <div id="leftUi">
             <img id="windowedMode" src="/media/assets/ui/windowed.png" onclick="windowedMode()">
           </div>
           <div id="rightUi">
-            <img id="windowlessMode" src="/media/assets/ui/windowless.png">
+            <img id="windowlessMode" src="/media/assets/ui/windowless.png" onclick="windowlessMode()">
           </div>
         </div>
-        <button id="setupNext" onclick="setupThrive(3)"><h1>Next</h1></button>
-        <button id="setupNext" onclick="setupThrive(1)"><h1>Back</h1></button>
-        <p>Windowless mode inspired by Hyprland.</p>
+        <div class="bottomSetup">
+        <button class="animate__animated animate__fadeIn" id="setupNext" onclick="setupThrive(3)"><h1>Next</h1></button>
+        <button class="animate__animated animate__fadeIn" id="setupBack" onclick="setupThrive(1)"><h1>Back</h1></button>
+        </div>
         `;
     } else if (pageNumber === 3) {
         setupContent.innerHTML = `
         <h1>Welcome to ThriveOS.</h1>
         <p>Let's setup your new favorite operating system!</p>
         <hr>
-        <h1>Page Cloaking</h1>
-        <p>Customize how you want your Thrive tab to look like. For your own reasons, of course! We won't judge.</p>
+        <h1 class="animate__animated animate__fadeIn">Page Cloaking</h1>
+        <p class="animate__animated animate__fadeIn">Customize how you want your Thrive tab to look like. For your own reasons, of course! We won't judge.</p>
         <br>
-        <h2>Website favicon: </h2>
-        <input id="websiteFaviconInput" placeholder="https://example.com/favicon.png"></input><br><br><br>
-        <h2>Website Title: </h2>
-        <input id="websiteTitleInput" placeholder="Example Website"></input><br><br><br>
+        <h2 class="animate__animated animate__fadeIn">Website favicon: </h2>
+        <input class="animate__animated animate__fadeIn" id="websiteFaviconInput" placeholder="https://example.com/favicon.png (Optional)"></input><br><br><br>
+        <h2 class="animate__animated animate__fadeIn">Website Title: </h2>
+        <input class="animate__animated animate__fadeIn" id="websiteTitleInput" placeholder="Website Name (Optional)"></input><br><br><br>
         <script>
         const websiteTitleInput = document.getElementById("websiteTitleInput");
         const websiteFaviconInput = document.getElementById("websiteFaviconInput");
         </script>
-        <button id="submitCloak" onclick="cloakPage(websiteFaviconInput.value, websiteTitleInput.value)">Cloak!</button><br><br><br>
+        <button class="animate__animated animate__fadeIn" id="submitCloak" onclick="cloakPage(websiteFaviconInput.value, websiteTitleInput.value)">Cloak!</button><br><br><br>
         <br>
-        <p>Pre-made assets not included due to copyright limitations.</p>
-        <button id="setupNext" onclick="setupThrive(4)"><h1>Next</h1></button>
-        <button id="setupNext" onclick="setupThrive(2)"><h1>Back</h1></button>
+        <p class="animate__animated animate__fadeIn">Pre-made assets not included due to copyright limitations.</p>
+        <div class="bottomSetup">
+        <button class="animate__animated animate__fadeIn" id="setupNext" onclick="setupThrive(4)"><h1>Next</h1></button>
+        <button class="animate__animated animate__fadeIn" id="setupBack" onclick="setupThrive(2)"><h1>Back</h1></button>
+        </div>
+        `;
+    } else if (pageNumber === 4) {
+        setupContent.innerHTML = `
+        <h1>Welcome to ThriveOS.</h1>
+        <p>Let's setup your new favorite operating system!</p>
+        <hr>
+        <h1 class="animate__animated animate__fadeIn">Finished setup</h1>
+        <p class="animate__animated animate__fadeIn">Reminder to self: finishSetup() function</p>
+        <div class="bottomSetup">
+        <button class="animate__animated animate__fadeIn" id="setupNext" onclick="finishSetup()"><h1>Finish</h1></button>
+        <button class="animate__animated animate__fadeIn" id="setupBack" onclick="setupThrive(3)"><h1>Back</h1></button>
+        </div>
         `;
     }
 }
@@ -292,6 +353,33 @@ function setupThrive(pageNumber) {
 
 // functions to manage the window manager mode.
 
+var windowMode = "windowless"; // WIll use in future to set windowMode
+
 function windowedMode() {
-    console.log("it works.")
+    const windowedModeBtn = document.getElementById("windowedMode");
+    const windowlessModeBtn = document.getElementById("windowlessMode");
+    windowlessModeBtn.style.backgroundColor = "transparent";
+    if (windowedModeBtn.style.backgroundColor === "rgba(100, 100, 100, 0.9)") {
+        windowedModeBtn.style.backgroundColor = "transparent";
+    } else {
+        windowedModeBtn.style.backgroundColor = "rgba(100, 100, 100, 0.9)";
+        windowMode = "windows";
+        console.log("Set window mode to: " + windowMode);
+    }
 }
+
+function windowlessMode() {
+    const windowedModeBtn = document.getElementById("windowedMode");
+    const windowlessModeBtn = document.getElementById("windowlessMode");
+    windowedModeBtn.style.backgroundColor = "transparent";
+    if (windowlessModeBtn.style.backgroundColor === "rgba(100, 100, 100, 0.9)") {
+        windowlessModeBtn.style.backgroundColor = "transparent";
+    } else {
+        windowlessModeBtn.style.backgroundColor = "rgba(100, 100, 100, 0.9)";
+        windowMode = "windowless"
+        console.log("Set window mode to: " + windowMode);
+    }
+}
+
+
+// On setup finish, remember to read windowMode var.
